@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deeksha Luthra | Data Analyst</title>
+<meta name="description" content="Portfolio of Deeksha Luthra, Data Analyst skilled in SQL, Python, Power BI and Tableau, with a focus on workforce analytics, data quality and controls.">
+<meta property="og:title" content="Deeksha Luthra | Data Analyst">
+<meta property="og:description" content="Workforce analytics, data validation and dashboard reporting with SQL, Python, Power BI and Tableau.">
+<meta property="og:image" content="professional_pic.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F7F9; --surface:#FFFFFF; --ink:#12202F; --muted:#51607A;
+  --line:#D9E1E8; --accent:#0B6E78; --accent-soft:#DDF0F1; --warm:#E8B04B;
+  --head:'Bricolage Grotesque',Georgia,'Times New Roman',serif;
+  --body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1822; --surface:#15222F; --ink:#E7EEF4; --muted:#9FB0C2;
+    --line:#26384A; --accent:#5CC3CC; --accent-soft:#16363C;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65;font-size:17px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--warm);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);line-height:1.15;letter-spacing:-.015em}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav .brand{font-family:var(--head);font-weight:700;color:var(--ink);font-size:1.1rem}
+nav ul{display:flex;gap:22px;list-style:none;font-size:.95rem}
+nav ul a{color:var(--muted)}
+nav ul a:hover{color:var(--accent);text-decoration:none}
+
+/* hero */
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1fr auto;gap:64px;align-items:center}
+.role{color:var(--accent);font-weight:600;margin-bottom:14px}
+.hero h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:700;margin-bottom:22px}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:56ch;margin-bottom:30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:.97rem;border:1.5px solid var(--accent);transition:background .2s,color .2s}
+.btn svg{width:18px;height:18px;fill:currentColor}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{background:transparent;color:var(--accent);text-decoration:none}
+.btn.ghost{color:var(--accent)}
+.btn.ghost:hover{background:var(--accent-soft);text-decoration:none}
+.photo{justify-self:center;width:230px;height:230px;border-radius:50%;padding:6px;background:var(--surface);border:2px solid var(--accent);box-shadow:0 0 0 10px var(--accent-soft)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 28%;border-radius:50%;background:var(--line)}
+
+/* stats strip */
+.facts{border-block:1px solid var(--line);background:var(--surface)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-block:26px}
+.facts b{display:block;font-family:var(--head);font-size:1.5rem}
+.facts span{color:var(--muted);font-size:.92rem}
+
+section{padding:76px 0 0}
+section h2{font-size:clamp(1.8rem,3.5vw,2.4rem);margin-bottom:28px}
+.about p{max-width:70ch;color:var(--muted);margin-bottom:16px}
+.about p strong{color:var(--ink)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.panel h3{font-size:1.1rem;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.tags li{background:var(--accent-soft);color:var(--accent);padding:4px 12px;border-radius:999px;font-size:.88rem;font-weight:500}
+
+/* timeline */
+.timeline{border-left:2px solid var(--line);margin-left:6px}
+.job{position:relative;padding:0 0 40px 30px}
+.job::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.job .when{color:var(--muted);font-size:.92rem}
+.job h3{font-size:1.3rem;margin:2px 0 2px}
+.job .org{color:var(--accent);font-weight:600;margin-bottom:12px}
+.job ul{padding-left:18px;color:var(--muted)}
+.job li{margin-bottom:8px}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.project{display:flex;flex-direction:column}
+.project h3{font-size:1.25rem;margin-bottom:8px}
+.project p{color:var(--muted);flex:1;margin-bottom:16px}
+.project .tags{margin-bottom:18px}
+.project .links{display:flex;gap:18px;font-weight:600;font-size:.95rem}
+
+/* education / certs */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.edu-item{padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--line)}
+.edu-item:last-child{border:0;margin:0;padding:0}
+.edu-item b{display:block}
+.edu-item span{color:var(--muted);font-size:.93rem}
+.plain{list-style:none}
+.plain li{padding:9px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.plain li:last-child{border:0}
+.plain li b{color:var(--ink);font-weight:600}
+
+/* contact */
+.contact{margin-top:76px;background:var(--ink);color:#F4F7F9;padding:64px 0}
+.contact h2{margin-bottom:12px}
+.contact p{color:#B9C6D3;max-width:52ch;margin-bottom:26px}
+.contact .btn.primary{background:var(--warm);border-color:var(--warm);color:#12202F}
+.contact .btn.primary:hover{background:transparent;color:var(--warm)}
+.contact .btn.ghost{color:#F4F7F9;border-color:#6C8197}
+.contact .btn.ghost:hover{background:rgba(255,255,255,.08)}
+footer{padding:22px 0;text-align:center;font-size:.88rem;color:var(--muted)}
+
+@media (max-width:820px){
+  .hero{padding-top:44px}
+  .hero .wrap{grid-template-columns:1fr;gap:44px}
+  .photo{order:-1;width:190px;height:190px}
+  .facts .wrap{grid-template-columns:repeat(2,1fr)}
+  .skills,.projects,.two{grid-template-columns:1fr}
+  nav ul{gap:14px;font-size:.88rem}
+  nav ul li:nth-child(n+5){display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">Deeksha Luthra</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="role">Data Analyst · New Delhi, India</p>
+      <h1>I turn workforce and operational data into decisions.</h1>
+      <p class="lead">I analyze large datasets to find trends, anomalies and root causes, then turn them into clear reports and dashboards that stakeholders can act on. I'm now focused on applying analytics to risk, controls and operations in banking and financial services.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://www.linkedin.com/in/deeksha-luthra-a12699227?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_ios" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+        <a class="btn ghost" href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+          GitHub
+        </a>
+        <a class="btn ghost" href="mailto:deekshaluthra14@gmail.com">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5L12 11.8 19.8 6H4.2zM20 7.9l-7.4 5.5a1 1 0 0 1-1.2 0L4 7.9V18h16V7.9z"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="professional_pic.png" alt="Portrait of Deeksha Luthra" width="230" height="230">
+    </div>
+  </div>
+</header>
+
+<div class="facts">
+  <div class="wrap">
+    <div><b>1+ year</b><span>Analyzing workforce data</span></div>
+    <div><b>TCS</b><span>System Engineer</span></div>
+    <div><b>SQL · Python</b><span>Pandas, NumPy</span></div>
+    <div><b>Power BI · Tableau</b><span>Dashboard reporting</span></div>
+  </div>
+</div>
+
+<main>
+<section id="about" class="about">
+  <div class="wrap">
+    <h2>About me</h2>
+    <p>I'm a Data Analyst at <strong>Tata Consultancy Services</strong> as a System Engineer, working with large employee and workforce datasets across HCM systems. My day-to-day is validating data, tracing quality and lineage issues, and presenting what the numbers mean to non-technical stakeholders.</p>
+    <p>I have a B.Tech in Electronics &amp; Computer Engineering and a software background in the MERN stack and Java, which helps me work well with engineering teams. I also have a strong grounding in data governance, access control and policy enforcement, and I want to bring that to analytics roles in banking and financial services.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="panel">
+        <h3>Data analysis &amp; reporting</h3>
+        <ul class="tags"><li>Trend &amp; root-cause analysis</li><li>Summary statistics</li><li>Data validation &amp; QA</li><li>Data quality &amp; lineage</li><li>Dashboard reporting</li></ul>
+      </div>
+      <div class="panel">
+        <h3>Technical tools</h3>
+        <ul class="tags"><li>SQL</li><li>Python</li><li>Pandas</li><li>NumPy</li><li>Power BI</li><li>Tableau</li><li>Excel</li><li>JavaScript</li><li>Core Java</li></ul>
+      </div>
+      <div class="panel">
+        <h3>Operations &amp; governance</h3>
+        <ul class="tags"><li>Project scoping</li><li>Stakeholder management</li><li>Capacity planning</li><li>Process improvement</li><li>Data governance &amp; controls</li></ul>
+      </div>
+      <div class="panel">
+        <h3>Risk &amp; policy</h3>
+        <ul class="tags"><li>Cybersecurity fundamentals</li><li>Access control</li><li>Policy enforcement</li><li>Systems monitoring</li><li>Compliance-driven operations</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <article class="job">
+        <p class="when">Aug 2025 – Present</p>
+        <h3>System Engineer</h3>
+        <p class="org">Tata Consultancy Services</p>
+        <ul>
+          <li>Analyze large employee and workforce datasets to find trends and anomalies across the talent lifecycle, producing summary statistics and insights for decision-making.</li>
+          <li>Own data validation and quality checks across HCM systems, keeping headcount and capacity-planning reports accurate, reliable and traceable.</li>
+          <li>Define scope and deliverables for recurring and ad hoc reporting requests, and work with cross-functional teams to gather requirements.</li>
+          <li>Build and maintain Power BI and Tableau dashboards that support workforce planning and resource allocation.</li>
+          <li>Explain quantitative and qualitative findings in clear written and verbal summaries for non-technical stakeholders.</li>
+        </ul>
+      </article>
+      <article class="job">
+        <p class="when">Jan 2025 – Jun 2025</p>
+        <h3>Software Development Intern</h3>
+        <p class="org">VMM Education</p>
+        <ul>
+          <li>Built full-stack MERN applications, including RESTful APIs with authentication and secure CRUD operations that support access control, policy enforcement and systems monitoring.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <div class="projects">
+      <article class="panel project">
+        <h3>DEALARO</h3>
+        <p>A full-stack marketplace platform where car buyers and sellers can list, browse and connect, with user authentication, secure API integration and database operations.</p>
+        <ul class="tags"><li>MongoDB</li><li>Express</li><li>React</li><li>Node.js</li></ul>
+        <div class="links"><a href="https://github.com/YOUR-GITHUB-USERNAME/DEALARO" target="_blank" rel="noopener">View code</a></div>
+      </article>
+      <article class="panel project">
+        <h3>Movie DB</h3>
+        <p>A movie information system with database connectivity, API integration, JSON parsing and structured data retrieval.</p>
+        <ul class="tags"><li>Java</li><li>SQL</li><li>REST API</li><li>JSON</li></ul>
+        <div class="links"><a href="https://github.com/YOUR-GITHUB-USERNAME/Movie-DB" target="_blank" rel="noopener">View code</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap two">
+    <div>
+      <h2>Education</h2>
+      <div class="panel">
+        <div class="edu-item"><b>B.Tech, Electronics &amp; Computer Engineering</b><span>Guru Nanak Dev University, Amritsar · 2021 – 2025 · CGPA 7.76</span></div>
+        <div class="edu-item"><b>Class 12 (CBSE)</b><span>Bhavan's S.L. Public School · 2019 – 2021 · 88%</span></div>
+        <div class="edu-item"><b>Class 10 (ICSE)</b><span>Sacred Heart Sr. Sec. School · 2019 · 94%</span></div>
+      </div>
+    </div>
+    <div>
+      <h2>Certifications</h2>
+      <div class="panel">
+        <ul class="plain">
+          <li><b>Complete AI-Powered Data Analytics</b> · Udemy</li>
+          <li><b>Cybersecurity Analyst Job Simulation</b> · Forage</li>
+          <li><b>Full Stack Web Development</b> · VMM Education</li>
+          <li><b>Data Structures and Algorithms</b> · VMM Education</li>
+          <li><b>Core Java</b> · VMM Education</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="leadership">
+  <div class="wrap">
+    <h2>Leadership &amp; achievements</h2>
+    <div class="panel">
+      <ul class="plain">
+        <li><b>Event management:</b> led planning and coordination for university-level events with cross-functional peer teams.</li>
+        <li><b>National Science Olympiad:</b> State Rank 28. Participant in Vidyarthi Vigyan Manthan, India's largest science talent search.</li>
+        <li><b>Sports:</b> National-level lawn tennis silver medalist (ASISC Championship). National martial arts silver medalist and black belt holder.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's work together</h2>
+    <p>I'm open to data analyst roles, especially in banking, risk and operations. The quickest way to reach me is by email or LinkedIn.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:deekshaluthra14@gmail.com">deekshaluthra14@gmail.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/deeksha-luthra-a12699227?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_ios" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="yr">2026</span> Deeksha Luthra</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
